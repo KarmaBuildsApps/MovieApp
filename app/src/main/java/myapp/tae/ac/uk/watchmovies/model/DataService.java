@@ -10,7 +10,6 @@ import myapp.tae.ac.uk.watchmovies.api.InterfaceMovieAPI;
 import myapp.tae.ac.uk.watchmovies.extras.Constants;
 import myapp.tae.ac.uk.watchmovies.model.Movies.Movies;
 import myapp.tae.ac.uk.watchmovies.model.People.People;
-import myapp.tae.ac.uk.watchmovies.model.People.PeopleResult;
 import myapp.tae.ac.uk.watchmovies.model.TVSeries.TVSeries;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -46,12 +45,12 @@ public class DataService extends Observable {
                 movies = response.body();
                 setChanged();
                 notifyObservers(Constants.MOVIE_DATA_CHANGE);
-                Log.d(TAG, "onResponse: Movie Data Received");
+                Log.d(TAG, "onResponse: Movies Data Received" + movies.getResults());
             }
 
             @Override
             public void onFailure(Call<Movies> call, Throwable t) {
-                Log.d(TAG, "onFailure: Movie data retrieval failure");
+                Log.d(TAG, "onFailure: Movies data retrieval failure");
             }
         });
     }

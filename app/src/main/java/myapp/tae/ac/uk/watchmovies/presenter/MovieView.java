@@ -20,4 +20,6 @@ public interface MovieView {
 
     public void stopProgressDialog();
 
+    public void selectTab(int index);
+
 }

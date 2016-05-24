@@ -26,7 +26,6 @@ public class PeopleTabFragment extends Fragment {
     @Bind(R.id.tabRecyclerView)
     RecyclerView recyclerView;
     private PeopleAdapter peopleAdapter;
-    private List<PeopleResult> peopleDataList;
     int counter = 0;
 
     @Nullable
@@ -35,8 +34,6 @@ public class PeopleTabFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tab, container, false);
         ButterKnife.bind(this, view);
         peopleAdapter = new PeopleAdapter(getActivity());
-        if (peopleDataList != null)
-            peopleAdapter.setPopularPeople(peopleDataList);
         recyclerView = (RecyclerView) view.findViewById(R.id.tabRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(peopleAdapter);
@@ -45,10 +42,6 @@ public class PeopleTabFragment extends Fragment {
     }
 
     public void setPeopleData(List<PeopleResult> peopleData) {
-        Log.d(TAG, "setPeopleData: counter: " + ++counter);
-        if (peopleAdapter != null)
             peopleAdapter.setPopularPeople(peopleData);
-        else
-            peopleDataList = peopleData;
     }
 }

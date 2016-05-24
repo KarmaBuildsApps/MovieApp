@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WatchMovies</string>
+    <string name="navigation_drawer_open">Drawer_Open</string>
+    <string name="navigation_drawer_close">Drawer_Closed</string>
 </resources>

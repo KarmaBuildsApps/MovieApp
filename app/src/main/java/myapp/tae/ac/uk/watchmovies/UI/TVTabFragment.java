@@ -30,8 +30,6 @@ public class TVTabFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tab, container, false);
         ButterKnife.bind(this, view);
         adapter = new TVSeriesAdapter(getActivity());
-        if (tvList != null)
-            adapter.setPopularTVSeries(tvList);
         recyclerView = (RecyclerView) view.findViewById(R.id.tabRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
@@ -39,9 +37,6 @@ public class TVTabFragment extends Fragment {
     }
 
     public void setAdapterData(List<TVResult> tvSeries) {
-        if (adapter != null)
-            adapter.setPopularTVSeries(tvSeries);
-        else
-            tvList = tvSeries;
+        adapter.setPopularTVSeries(tvSeries);
     }
 }

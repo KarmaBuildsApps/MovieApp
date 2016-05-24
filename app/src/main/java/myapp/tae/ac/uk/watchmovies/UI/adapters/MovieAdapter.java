@@ -55,7 +55,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         holder.mDate.setText(movie.getReleaseDate());
         holder.mLang.setText(movie.getOriginalLanguage());
         holder.mOverview.setText(movie.getOverview());
-        holder.mRating.setRating((float) (movie.getVoteAverage() / 2));
+        holder.mRating.setRating(movie.getVoteAverage().floatValue());
     }
 
     @Override

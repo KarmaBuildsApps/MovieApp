@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CardviewMarginsAndPadding"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:elevation="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:padding="6dp"
         android:weightSum="100">
 
         <ImageView
             android:id="@+id/imageCover"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="30" />
 
         <RelativeLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="70"
-            android:padding="5dp">
+            android:paddingLeft="12dp">
 
             <TextView
                 android:id="@+id/movieTitle"
@@ -44,21 +47,22 @@
                 android:text="Date" />
 
             <TextView
+                android:id="@+id/movieLanguage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/movieGenre"
-                android:text="Language"
-                android:id="@+id/movieLanguage"/>
+                android:text="Language" />
 
             <RatingBar
                 android:id="@+id/movieRating"
+                style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/movieReleaseDate"
-                android:numStars="5"
+                android:numStars="10"
                 android:rating="3.5"
-                android:stepSize="0.5" />
+                android:stepSize="0.1" />
 
             <TextView
                 android:id="@+id/movieOverview"

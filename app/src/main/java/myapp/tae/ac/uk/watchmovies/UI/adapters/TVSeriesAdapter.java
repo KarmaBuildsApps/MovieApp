@@ -55,7 +55,8 @@ public class TVSeriesAdapter extends RecyclerView.Adapter<TVSeriesAdapter.ViewHo
         holder.mDate.setText(tv.getFirstAirDate());
         holder.mLang.setText(tv.getOriginalLanguage());
         holder.mOverview.setText(tv.getOverview());
-        holder.mRating.setRating((float) (tv.getVoteAverage() / 2));
+        holder.mRating.setRating(tv.getVoteAverage().floatValue());
+        ;
     }
 
     @Override

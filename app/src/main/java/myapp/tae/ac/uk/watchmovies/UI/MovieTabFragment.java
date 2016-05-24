@@ -23,26 +23,18 @@ public class MovieTabFragment extends Fragment {
     private MovieAdapter adapter;
     @Bind(R.id.tabRecyclerView)
     RecyclerView recyclerView;
-    private List<MovieResult> movieList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tab, container, false);
         ButterKnife.bind(this, view);
         adapter = new MovieAdapter(getActivity());
-
-        if (movieList != null)
-            adapter.setPopularMovies(movieList);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
         return view;
     }
 
     public void setAdapterData(List<MovieResult> movies) {
-        if (adapter != null)
-            adapter.setPopularMovies(movies);
-        else
-            movieList = movies;
+        adapter.setPopularMovies(movies);
     }
 }

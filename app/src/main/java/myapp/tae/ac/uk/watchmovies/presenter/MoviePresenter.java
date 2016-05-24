@@ -30,12 +30,12 @@ public class MoviePresenter implements Observer {
     public void update(Observable observable, Object data) {
         switch ((int) data) {
             case Constants.MOVIE_DATA_CHANGE:
-                Log.i(TAG, "update: Movie data RECEIVED");
-                view.setMovieData(service.getMovies().getMovieResults());
+                Log.i(TAG, "update: Movies data RECEIVED");
+                view.setMovieData(service.getMovies().getResults());
                 break;
             case Constants.TV_DATA_CHANGE:
                 Log.i(TAG, "update: TV Series data RECEIVED");
-                view.setTVData(service.getTvSeries().getTVResults());
+                view.setTVData(service.getTvSeries().getResults());
                 break;
             case Constants.PEOPLE_DATA_CHANGE:
                 List<PeopleResult> peopleResults = service.getPeople().getResults();
@@ -62,6 +62,11 @@ public class MoviePresenter implements Observer {
         showPopularMovies();
         showPopularTVSeries();
         showPopularPeople();
+    }
+
+    public void test(){
+        Log.d(TAG, "test: Movies: ");
+        service.retrieveMoviesFromTheMovieDb();
     }
 
     public void showPopularMovies() {

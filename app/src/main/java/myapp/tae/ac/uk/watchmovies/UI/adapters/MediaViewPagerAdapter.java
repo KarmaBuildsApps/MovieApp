@@ -3,9 +3,8 @@ package myapp.tae.ac.uk.watchmovies.UI.adapters;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import android.view.ViewGroup;
 
-import java.util.HashMap;
 import java.util.List;
 
 import myapp.tae.ac.uk.watchmovies.UI.MovieTabFragment;
@@ -29,6 +28,11 @@ public class MediaViewPagerAdapter extends FragmentPagerAdapter {
         movieTabFragment = new MovieTabFragment();
         tvTabFragment = new TVTabFragment();
         peopleTabFragment = new PeopleTabFragment();
+    }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        super.destroyItem(container, position, object);
     }
 
     @Override

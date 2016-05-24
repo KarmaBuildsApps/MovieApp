@@ -5,8 +5,8 @@ package myapp.tae.ac.uk.watchmovies.extras;
  */
 public class Constants {
     public static final String BASE_URL = "http://api.themoviedb.org/3/";
-    public static final String MOVIE_POPULAR = "discover/movie?sort_by=popularity.desc&api_key=";
-    public static final String TV_POPULAR = "discover/tv?sort_by=popularity.desc&api_key=";
+    public static final String MOVIE_POPULAR = "movie/popular?sort_by=popularity.desc&api_key=";
+    public static final String TV_POPULAR = "tv/popular?sort_by=popularity.desc&api_key=";
     public static final String PEOPLE_POPULAR = "person/popular?sort_by=popularity.desc&api_key=";
     public static final String API_KEY = "2943485038f25a96a2bccf8077eb71f6";
     public static final String POSTER_URL_BASE = "http://image.tmdb.org/t/p/w185";

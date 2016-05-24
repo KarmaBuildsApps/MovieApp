@@ -1,15 +1,15 @@
 
 package myapp.tae.ac.uk.watchmovies.model.TVSeries;
 
-import java.util.ArrayList;
-import java.util.List;
 import android.os.Parcel;
 import android.os.Parcelable;
-public class TVSeries implements Parcelable
-{
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class TVSeries implements Parcelable {
     private Integer page;
-    private List<TVResult> TVResults = new ArrayList<TVResult>();
+    private List<TVResult> results = new ArrayList<TVResult>();
     private Integer totalResults;
     private Integer totalPages;
     public final static Parcelable.Creator<TVSeries> CREATOR = new Creator<TVSeries>() {
@@ -18,7 +18,7 @@ public class TVSeries implements Parcelable
         public TVSeries createFromParcel(Parcel in) {
             TVSeries instance = new TVSeries();
             instance.page = ((Integer) in.readValue((Integer.class.getClassLoader())));
-            in.readList(instance.TVResults, (TVResult.class.getClassLoader()));
+            in.readList(instance.results, (myapp.tae.ac.uk.watchmovies.model.TVSeries.TVResult.class.getClassLoader()));
             instance.totalResults = ((Integer) in.readValue((Integer.class.getClassLoader())));
             instance.totalPages = ((Integer) in.readValue((Integer.class.getClassLoader())));
             return instance;
@@ -28,76 +28,59 @@ public class TVSeries implements Parcelable
             return (new TVSeries[size]);
         }
 
-    }
-    ;
+    };
 
     /**
-     * 
-     * @return
-     *     The page
+     * @return The page
      */
     public Integer getPage() {
         return page;
     }
 
     /**
-     * 
-     * @param page
-     *     The page
+     * @param page The page
      */
     public void setPage(Integer page) {
         this.page = page;
     }
 
     /**
-     * 
-     * @return
-     *     The TVResults
+     * @return The results
      */
-    public List<TVResult> getTVResults() {
-        return TVResults;
+    public List<TVResult> getResults() {
+        return results;
     }
 
     /**
-     * 
-     * @param TVResults
-     *     The TVResults
+     * @param results The results
      */
-    public void setTVResults(List<TVResult> TVResults) {
-        this.TVResults = TVResults;
+    public void setResults(List<TVResult> results) {
+        this.results = results;
     }
 
     /**
-     * 
-     * @return
-     *     The totalResults
+     * @return The totalResults
      */
     public Integer getTotalResults() {
         return totalResults;
     }
 
     /**
-     * 
-     * @param totalResults
-     *     The total_results
+     * @param totalResults The total_results
      */
     public void setTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
     }
 
     /**
-     * 
-     * @return
-     *     The totalPages
+     * @return The totalPages
      */
     public Integer getTotalPages() {
         return totalPages;
     }
 
     /**
-     * 
-     * @param totalPages
-     *     The total_pages
+     * @param totalPages The total_pages
      */
     public void setTotalPages(Integer totalPages) {
         this.totalPages = totalPages;
@@ -105,13 +88,13 @@ public class TVSeries implements Parcelable
 
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeValue(page);
-        dest.writeList(TVResults);
+        dest.writeList(results);
         dest.writeValue(totalResults);
         dest.writeValue(totalPages);
     }
 
     public int describeContents() {
-        return  0;
+        return 0;
     }
 
 }

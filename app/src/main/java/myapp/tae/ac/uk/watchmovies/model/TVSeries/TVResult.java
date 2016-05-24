@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import android.os.Parcel;
 import android.os.Parcelable;
+
 public class TVResult implements Parcelable
 {
     private String posterPath;
@@ -46,10 +47,10 @@ public class TVResult implements Parcelable
         }
 
     }
-    ;
+            ;
 
     /**
-     * 
+     *
      * @return
      *     The posterPath
      */
@@ -58,7 +59,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param posterPath
      *     The poster_path
      */
@@ -67,7 +68,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The popularity
      */
@@ -76,7 +77,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param popularity
      *     The popularity
      */
@@ -85,7 +86,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The id
      */
@@ -94,7 +95,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param id
      *     The id
      */
@@ -103,7 +104,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The backdropPath
      */
@@ -112,7 +113,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param backdropPath
      *     The backdrop_path
      */
@@ -121,7 +122,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The voteAverage
      */
@@ -130,7 +131,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param voteAverage
      *     The vote_average
      */
@@ -139,7 +140,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The overview
      */
@@ -148,7 +149,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param overview
      *     The overview
      */
@@ -157,7 +158,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The firstAirDate
      */
@@ -166,7 +167,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param firstAirDate
      *     The first_air_date
      */
@@ -175,7 +176,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The originCountry
      */
@@ -184,7 +185,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param originCountry
      *     The origin_country
      */
@@ -193,7 +194,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The genreIds
      */
@@ -202,7 +203,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param genreIds
      *     The genre_ids
      */
@@ -211,7 +212,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The originalLanguage
      */
@@ -220,7 +221,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param originalLanguage
      *     The original_language
      */
@@ -229,7 +230,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The voteCount
      */
@@ -238,7 +239,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param voteCount
      *     The vote_count
      */
@@ -247,7 +248,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The name
      */
@@ -256,7 +257,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param name
      *     The name
      */
@@ -265,7 +266,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @return
      *     The originalName
      */
@@ -274,7 +275,7 @@ public class TVResult implements Parcelable
     }
 
     /**
-     * 
+     *
      * @param originalName
      *     The original_name
      */
