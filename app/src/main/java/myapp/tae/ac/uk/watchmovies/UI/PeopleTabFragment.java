@@ -33,6 +33,7 @@ public class PeopleTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tab, container, false);
         ButterKnife.bind(this, view);
+        setRetainInstance(true);
         peopleAdapter = new PeopleAdapter(getActivity());
         recyclerView = (RecyclerView) view.findViewById(R.id.tabRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

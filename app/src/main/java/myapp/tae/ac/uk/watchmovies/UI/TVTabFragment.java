@@ -29,6 +29,7 @@ public class TVTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tab, container, false);
         ButterKnife.bind(this, view);
+        setRetainInstance(true);
         adapter = new TVSeriesAdapter(getActivity());
         recyclerView = (RecyclerView) view.findViewById(R.id.tabRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

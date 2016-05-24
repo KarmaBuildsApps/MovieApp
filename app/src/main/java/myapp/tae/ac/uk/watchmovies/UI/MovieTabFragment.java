@@ -28,6 +28,7 @@ public class MovieTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tab, container, false);
         ButterKnife.bind(this, view);
+        setRetainInstance(true);
         adapter = new MovieAdapter(getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
