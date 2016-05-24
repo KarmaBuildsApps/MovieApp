@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements MovieView {
         configInjection(dataService);
         setupProgressDialog();
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         presenter = new MoviePresenter(this, dataService);
         viewPagerAdapter = new MediaViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);

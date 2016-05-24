@@ -52,7 +52,6 @@ public class MoviePresenter implements Observer {
                 view.stopProgressDialog();
                 isDataDownloadForTheFirstTime = false;
                 downloadDataCounter = 0;
-                view.setViewPagerAdapter();
             }
         }
     }

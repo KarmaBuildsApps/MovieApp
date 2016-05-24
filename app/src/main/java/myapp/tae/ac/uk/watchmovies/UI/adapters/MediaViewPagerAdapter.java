@@ -19,7 +19,7 @@ import myapp.tae.ac.uk.watchmovies.model.TVSeries.TVResult;
 /**
  * Created by Karma on 22/05/16.
  */
-public class MediaViewPagerAdapter extends FragmentStatePagerAdapter {
+public class MediaViewPagerAdapter extends FragmentPagerAdapter {
     private MovieTabFragment movieTabFragment;
     private TVTabFragment tvTabFragment;
     private PeopleTabFragment peopleTabFragment;

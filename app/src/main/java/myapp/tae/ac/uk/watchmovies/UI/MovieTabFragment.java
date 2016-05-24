@@ -30,8 +30,10 @@ public class MovieTabFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tab, container, false);
         ButterKnife.bind(this, view);
         adapter = new MovieAdapter(getActivity());
+
         if (movieList != null)
             adapter.setPopularMovies(movieList);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
         return view;
@@ -42,6 +44,5 @@ public class MovieTabFragment extends Fragment {
             adapter.setPopularMovies(movies);
         else
             movieList = movies;
-
     }
 }
